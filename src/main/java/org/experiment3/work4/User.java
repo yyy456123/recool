@@ -1,4 +1,4 @@
-package com.github.permissiondog.os.exp3.p4;
+package org.experiment3.work4;
 
 public class User {
     private final String username;

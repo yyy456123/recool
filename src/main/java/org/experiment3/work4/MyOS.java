@@ -1,16 +1,14 @@
-package com.github.permissiondog.os.exp3.p4;
+package org.experiment3.work4;
 
-import com.github.permissiondog.os.exp3.p4.commands.Exit;
-import com.github.permissiondog.os.exp3.p4.commands.Help;
-import com.github.permissiondog.os.exp3.p4.commands.Login;
-import com.github.permissiondog.os.exp3.p4.commands.Logout;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class NEUOS {
+public class MyOS {
     private final BufferedReader in;
     private final Map<String, Command> commands = new HashMap<>();
     private boolean stopped = false;
@@ -19,11 +17,11 @@ public class NEUOS {
     private User userLoggedIn;
     private File workingDirectory;
 
-    public NEUOS() {
+    public MyOS() {
         in = new BufferedReader(new InputStreamReader(System.in));
 
     }
-    public NEUOS addUser(User user) {
+    public MyOS addUser(User user) {
         users.put(user.getUsername(), user);
         root.addChild(File.directory(user.getUsername(), null));
         return this;
@@ -36,13 +34,22 @@ public class NEUOS {
     public void boot() {
         System.out.println("""
                 \033[96m
-                  _   _ ______ _    _  ____   _____\s
-                 | \\ | |  ____| |  | |/ __ \\ / ____|
-                 |  \\| | |__  | |  | | |  | | (___ \s
-                 | . ` |  __| | |  | | |  | |\\___ \\\s
-                 | |\\  | |____| |__| | |__| |____) |
-                 |_| \\_|______|\\____/ \\____/|_____/\s
-                                                   \s
+                                                                   \s
+                                                               ____               ,----..               \s
+                                                             ,'  , `.            /   /   \\              \s
+                                                          ,-+-,.' _ |           /   .     :             \s
+                                                       ,-+-. ;   , ||          .   /   ;.  \\            \s
+                                                      ,--.'|'   |  ;|         .   ;   /  ` ;  .--.--.   \s
+                                                     |   |  ,', |  ':     .--,;   |  ; \\ ; | /  /    '  \s
+                                                     |   | /  | |  ||   /_ ./||   :  | ; | '|  :  /`./  \s
+                                                     '   | :  | :  |,, ' , ' :.   |  ' ' ' :|  :  ;_    \s
+                                                     ;   . |  ; |--'/___/ \\: |'   ;  \\; /  | \\  \\    `. \s
+                                                     |   : |  | ,    .  \\  ' | \\   \\  ',  /   `----.   \\\s
+                                                     |   : '  |/      \\  ;   :  ;   :    /   /  /`--'  /\s
+                                                     ;   | |`-'        \\  \\  ;   \\   \\ .'   '--'.     / \s
+                                                     |   ;/             :  \\  \\   `---`       `--'---'  \s
+                                                     '---'               \\  ' ;                         \s
+                                                                          `--`                          \s
                 \033[0m
                 """);
         try {
@@ -58,7 +65,7 @@ public class NEUOS {
         stopped = true;
     }
 
-    public NEUOS registerCommand(Command cmd) {
+    public MyOS registerCommand(Command cmd) {
         commands.put(cmd.getCommandName(), cmd);
         return this;
     }
@@ -115,10 +122,10 @@ public class NEUOS {
     // 打印当前用户和目录信息
     private void printInfo() {
         if (userLoggedIn == null) {
-            System.out.print("\033[1;35mNEUOS\033[0m $ ");
+            System.out.print("\033[1;35mMyOS\033[0m $ ");
             return;
         }
-        System.out.print("\033[1;35m" + userLoggedIn.getUsername() + "@NEUOS \033[1;96m" + workingDirectory.getFullPath() + "\033[0m $ ");
+        System.out.print("\033[1;35m" + userLoggedIn.getUsername() + "@MyOS \033[1;96m" + workingDirectory.getFullPath() + "\033[0m $ ");
     }
 
     private void handleCommand(String cmd) throws IOException {

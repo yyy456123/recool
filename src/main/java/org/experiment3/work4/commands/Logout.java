@@ -1,13 +1,12 @@
-package com.github.permissiondog.os.exp3.p4.commands;
+package org.experiment3.work4.commands;
 
-import com.github.permissiondog.os.exp3.p4.Command;
-import com.github.permissiondog.os.exp3.p4.NEUOS;
 
-import java.io.IOException;
+import org.experiment3.work4.Command;
+import org.experiment3.work4.MyOS;
 
 public class Logout implements Command {
     @Override
-    public void run(NEUOS os) {
+    public void run(MyOS os) {
         os.logout();
     }
 

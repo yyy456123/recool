@@ -1,4 +1,4 @@
-package com.github.permissiondog.os.exp3.p2;
+package org.experiment3.work2;
 
 public class Instruction {
     private String operation;

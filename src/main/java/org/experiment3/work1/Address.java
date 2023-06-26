@@ -1,4 +1,4 @@
-package com.github.permissiondog.os.exp3.p1;
+package org.experiment3.work1;
 
 import java.util.HexFormat;
 

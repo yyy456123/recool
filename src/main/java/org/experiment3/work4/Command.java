@@ -1,9 +1,9 @@
-package com.github.permissiondog.os.exp3.p4;
+package org.experiment3.work4;
 
 import java.io.IOException;
 
 public interface Command {
-    void run(NEUOS os) throws IOException;
+    void run(MyOS os) throws IOException;
     String getCommandName();
     String getDescription();
     boolean needLogin();

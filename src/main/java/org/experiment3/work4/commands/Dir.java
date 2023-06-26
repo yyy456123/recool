@@ -1,13 +1,14 @@
-package com.github.permissiondog.os.exp3.p4.commands;
+package org.experiment3.work4.commands;
 
-import com.github.permissiondog.os.exp3.p4.Command;
-import com.github.permissiondog.os.exp3.p4.NEUOS;
+
+import org.experiment3.work4.Command;
+import org.experiment3.work4.MyOS;
 
 public class Dir implements Command {
     private final static String DIR_FORMAT = "%-6s %-8s %-4s \033[36m%s\033[0m\n";
     private static final String FILE_FORMAT = "%-6s %-8s %-4s \033[32m%s\033[0m\n";
     @Override
-    public void run(NEUOS os) {
+    public void run(MyOS os) {
         System.out.printf("\033[1m%-6s %-8s %-4s %s\033[0m\n", "length", "position", "code", "name");
         System.out.printf(DIR_FORMAT, "", "", "", ".");
         System.out.printf(DIR_FORMAT, "", "", "", "..");

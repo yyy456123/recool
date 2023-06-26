@@ -1,13 +1,14 @@
-package com.github.permissiondog.os.exp3.p4.commands;
+package org.experiment3.work4.commands;
 
-import com.github.permissiondog.os.exp3.p4.Command;
-import com.github.permissiondog.os.exp3.p4.NEUOS;
+
+import org.experiment3.work4.Command;
+import org.experiment3.work4.MyOS;
 
 import java.io.IOException;
 
 public class Read implements Command {
     @Override
-    public void run(NEUOS os) throws IOException {
+    public void run(MyOS os) throws IOException {
         System.out.print("请输入读入的文件名> ");
         var filename = os.in().readLine();
         var file = os.getWorkingDirectory().getChild(filename);

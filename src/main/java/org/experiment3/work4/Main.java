@@ -1,20 +1,21 @@
-package com.github.permissiondog.os.exp3.p4;
+package org.experiment3.work4;
 
-import com.github.permissiondog.os.exp3.p4.commands.*;
+
+import org.experiment3.work4.commands.*;
 
 public class Main {
     public static void main(String[] args) {
-        new NEUOS()
+        new MyOS()
                 .addUser(new User("admin"))
-                .addUser(new User("zhangsan1"))
-                .addUser(new User("zhangsan2"))
-                .addUser(new User("zhangsan3"))
-                .addUser(new User("zhangsan4"))
-                .addUser(new User("zhangsan5"))
-                .addUser(new User("zhangsan6"))
-                .addUser(new User("zhangsan7"))
-                .addUser(new User("zhangsan8"))
-                .addUser(new User("lisi"))
+                .addUser(new User("user1"))
+                .addUser(new User("user2"))
+                .addUser(new User("user3"))
+                .addUser(new User("user4"))
+                .addUser(new User("user5"))
+                .addUser(new User("user6"))
+                .addUser(new User("user7"))
+                .addUser(new User("user8"))
+                .addUser(new User("user9"))
                 .registerCommand(new Help())
                 .registerCommand(new Login())
                 .registerCommand(new Logout())
