@@ -1,0 +1,204 @@
+/* 基础样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 页面布局 */
+
+header {
+    height: 70px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+#current-time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+main {
+    margin: 50px 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section {
+    background-color: #eee;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    font-size: 24px;
+    padding: 10px 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+.featured-heroes {
+    margin: 50px 0;
+}
+
+.hero-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-card {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.hero-card img {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hero-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.testimonial p:last-child {
+    margin-top: 20px;
+    text-align: right;
+    font-style: italic;
+}
+
+.testimonial img {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer-section {
+    height: 70px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 响应式布局 */
+
+@media(max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 20px;
+        padding: 8px 20px;
+    }
+
+    .hero-list {
+        flex-wrap: wrap;
+    }
+
+    .hero-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-list {
+        flex-wrap: wrap;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
